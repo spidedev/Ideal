@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (DialogueManager.GetInstance()._dialogueIsPlaying)
         {
+            _animator.SetFloat("Speed", 0.00f);
             return;
         }
         
