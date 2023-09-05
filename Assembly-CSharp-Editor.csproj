@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{da69075a-da25-8da6-ba58-6ed404cb536b}</ProjectGuid>
+    <ProjectGuid>{5d92cf56-ca4a-7d8c-b49e-16715d939c21}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -275,19 +275,19 @@
      <HintPath>C:\Program Files\Unity 2020.3.48f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>C:\Program Files\Unity 2020.3.48f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -638,68 +638,68 @@
      <HintPath>C:\Program Files\Unity 2020.3.48f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.TestRunner">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.TestRunner">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InputSystem">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>C:\Users\Aless\Documents\proyects\New Unity Project\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InputSystem">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{b28fb5b2-6244-0c6b-a872-40dd957e5fe0}</Project>
+      <Project>{846af89a-34ee-1bf9-e382-6f49f8bb9507}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Ink-Libraries.csproj">
-      <Project>{75cb743d-e4fc-717a-74d2-ebc75b048ae5}</Project>
+      <Project>{04f5caa6-1e65-83d0-5b99-ffb44639146c}</Project>
       <Name>Ink-Libraries</Name>
     </ProjectReference>
     <ProjectReference Include="InkEditor.csproj">
-      <Project>{0c0f3fb2-3190-cb14-ec99-6a38d980e91f}</Project>
+      <Project>{9d7c34ba-7fe1-2cce-3dbb-16a9a23d79ad}</Project>
       <Name>InkEditor</Name>
     </ProjectReference>
   </ItemGroup>
