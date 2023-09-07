@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   CanCooldown: 1
-  MaxTimeToPressDown: 50
+  MaxTimeToPressDown: 20
   WaitAfterCooldown: 1.3

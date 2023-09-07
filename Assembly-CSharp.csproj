@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{846af89a-34ee-1bf9-e382-6f49f8bb9507}</ProjectGuid>
+    <ProjectGuid>{49906a2b-11b8-6d51-1c3c-52ddcb704d1b}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -49,15 +49,29 @@
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
      <Compile Include="Assets\Input\Input.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
-     <Compile Include="Assets\Footsteps.cs" />
+     <Compile Include="Assets\Player Scripts\Footsteps.cs" />
+     <Compile Include="Assets\Inventory\Script\ItemObject.cs" />
+     <Compile Include="Assets\Inventory\Script\KeyItemObject.cs" />
+     <Compile Include="Assets\Inventory\Script\FoodObject.cs" />
+     <Compile Include="Assets\Inventory\Script\DefaultObject.cs" />
+     <Compile Include="Assets\Inventory\Script\InventoryObject.cs" />
+     <Compile Include="Assets\Player Scripts\InventoryManagement_PLR.cs" />
+     <Compile Include="Assets\Inventory\GUI\InventoryManagement_GUI.cs" />
+     <Compile Include="Assets\Popups\PopupManagement_MNG.cs" />
+     <Compile Include="Assets\Popup_Own.cs" />
+     <Compile Include="Assets\OWN_GUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Sounds" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\Inventory\GUI\Prefab" />
+     <Folder Include="Assets\Popups" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\Sprites\New Folder\New Folder" />
+     <Folder Include="Assets\Sprites\Tiles\TILESETS" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <Folder Include="Assets\Inventory\Items" />
      <Folder Include="Assets\Tilemaps" />
      <None Include="Assets\Dialogues\Test 1.json" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
@@ -69,6 +83,7 @@
      <Folder Include="Assets\Player Scripts" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Ink\Demos\Basic Demo\Scripts" />
+     <Folder Include="Assets\Popups\Prefabs" />
      <Folder Include="Assets\TextMesh Pro" />
      <None Include="Assets\Dialogues\Test 2.json" />
      <Folder Include="Assets\Input" />
@@ -76,12 +91,15 @@
      <Folder Include="Assets\Ink\Documentation" />
      <Folder Include="Assets\Core Fonts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <Folder Include="Assets\Sprites\Tiles\New Folder" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <Folder Include="Assets\Sprites\Tiles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\Inventory\Script" />
      <Folder Include="Assets\Objects" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <Folder Include="Assets\Popups\Anims" />
      <Folder Include="Assets\Ink\Demos\Basic Demo\Prefabs" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <Folder Include="Assets\Dialogues\Dialogue Scripts" />
@@ -92,8 +110,11 @@
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
+     <Folder Include="Assets\Inventory" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Ink" />
+     <Folder Include="Assets\Inventory\GUI" />
+     <Folder Include="Assets\Sprites\Tiles\New Folder\New Folder" />
      <None Include="Assets\Ink\Demos\Basic Demo\Ink\story.json" />
      <Folder Include="Assets\Sprites\New Folder" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -103,6 +124,7 @@
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Ink\Extras" />
+     <None Include="Assets\Dialogues\Garden Flower.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Assets\Fonts" />
@@ -678,58 +700,58 @@
      <HintPath>C:\Program Files\Unity 2020.3.48f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InputSystem">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Aless\fork\Ideal\Ideal-main.7z\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\Users\Aless\fork\Ideal\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Ink-Libraries.csproj">
-      <Project>{04f5caa6-1e65-83d0-5b99-ffb44639146c}</Project>
+      <Project>{390754c0-1984-73a8-74be-8d494c29deeb}</Project>
       <Name>Ink-Libraries</Name>
     </ProjectReference>
     <ProjectReference Include="InkEditor.csproj">
-      <Project>{9d7c34ba-7fe1-2cce-3dbb-16a9a23d79ad}</Project>
+      <Project>{0b475354-a8a5-3e4d-0046-d9c132d821ae}</Project>
       <Name>InkEditor</Name>
     </ProjectReference>
   </ItemGroup>

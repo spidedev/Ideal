@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+using randomL = System.Random;
 
 public class TestNPC : MonoBehaviour
 {
@@ -13,6 +15,13 @@ public class TestNPC : MonoBehaviour
     private float _timer, _maxTime, _secsToCooldown;
     [SerializeField] private ObjectSettings _settings;
     [SerializeField] private TextAsset _dialogue;
+    public AudioSource source;
+    public static GameObject selected;
+
+    [Header("(Don't use if not an Item.)")]
+    public ItemObject item;
+
+    public int amount;
     
     
     // Start is called before the first frame update
@@ -24,6 +33,7 @@ public class TestNPC : MonoBehaviour
         _prompt.SetActive(false);
         _canCooldown = _settings.CanCooldown;
         _secsToCooldown = _settings.WaitAfterCooldown;
+        source = gameObject.AddComponent<AudioSource>();
     }
 
     private void Update()
@@ -39,13 +49,28 @@ public class TestNPC : MonoBehaviour
             return;
         }
 
-        if (_playerNear)
+        if (selected == gameObject)
         {
             _prompt.SetActive(true);
         }
         else
         {
             _prompt.SetActive(false);
+        }
+
+        if (_playerNear)
+        {
+            if (selected == null)
+            {
+                selected = gameObject;
+            }
+        }
+        else
+        {
+            if (selected == gameObject)
+            {
+                selected = null;
+            }
         }
 
         if (_timercontinue)
@@ -85,7 +110,7 @@ public class TestNPC : MonoBehaviour
 
     void AddTimer()
     {
-        if (_playerNear)
+        if (selected == gameObject)
         {
             _timercontinue = true;
         }
@@ -103,14 +128,35 @@ public class TestNPC : MonoBehaviour
 
     void Announce()
     {
-        if (_playerNear)
+        if (selected == gameObject)
         {
-            DialogueManager.GetInstance().EnterDialogueMode(_dialogue);
+            if (_settings.type == ObjectSettings.Type.NPC)
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(_dialogue);
+            } else if (_settings.type == ObjectSettings.Type.Item)
+            {
+                if (_settings.DialogueNeeded)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(_dialogue);
+                    AddObject();
+                }
+                else
+                {
+                    AddObject();
+                }
+            }
         }
         else
         {
             Debug.Log("Player not near");
         }
+    }
+
+    public void AddObject()
+    {
+        InventoryManagement_PLR.GetInstance().inventory.AddItem(item, amount);
+        source.PlayOneShot(_settings.clips[Random.Range(0, _settings.clips.Length)]);
+        Destroy(gameObject, 0.04f);
     }
 
     IEnumerator CoolingDown()

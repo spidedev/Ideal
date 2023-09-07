@@ -72,6 +72,8 @@ public class DialogueManager : MonoBehaviour
     private bool _canContinueToNextLine = false;
     private bool _typing;
     private float _originalValue;
+    
+    public static event Action finishedDialogue;
 
     private void Awake()
     {
@@ -156,6 +158,7 @@ public class DialogueManager : MonoBehaviour
         _dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         _dialogueText.text = "";
+        finishedDialogue?.Invoke();
     }
 
     private void ContinueStory()

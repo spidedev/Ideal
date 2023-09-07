@@ -53,6 +53,33 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""686003aa-4e88-4cd0-8d26-e37640e8ec2b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Up_Inv"",
+                    ""type"": ""Button"",
+                    ""id"": ""30b1d36c-c089-48a8-98cd-6104f8b6af32"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Down_Inv"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2b1499e-387a-47d0-afda-49d261a3c00c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -328,6 +355,83 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""XR"",
                     ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ca7342c6-9551-4ded-8858-ac91dbedd5e2"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9558c7d-3748-4b46-bbb0-db45c2be84ee"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13b63690-a0b3-4a98-bcb8-0d90dfb03848"",
+                    ""path"": ""*/{SecondaryAction}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ecff6fb-212a-4146-a846-f92b099fef91"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Up_Inv"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8d207c4-4bb5-493f-bcc8-320552869673"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Up_Inv"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""63e3cce7-a17c-4b25-a259-666de1f6f65c"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Down_Inv"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d4612d6-7a3a-43ae-8adb-4f5d4d3c911e"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Down_Inv"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -918,6 +1022,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+        m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
+        m_Player_Up_Inv = m_Player.FindAction("Up_Inv", throwIfNotFound: true);
+        m_Player_Down_Inv = m_Player.FindAction("Down_Inv", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -994,6 +1101,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
+    private readonly InputAction m_Player_Inventory;
+    private readonly InputAction m_Player_Up_Inv;
+    private readonly InputAction m_Player_Down_Inv;
     public struct PlayerActions
     {
         private @MainInput m_Wrapper;
@@ -1001,6 +1111,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
+        public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+        public InputAction @Up_Inv => m_Wrapper.m_Player_Up_Inv;
+        public InputAction @Down_Inv => m_Wrapper.m_Player_Down_Inv;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1019,6 +1132,15 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @Fire.started += instance.OnFire;
             @Fire.performed += instance.OnFire;
             @Fire.canceled += instance.OnFire;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
+            @Up_Inv.started += instance.OnUp_Inv;
+            @Up_Inv.performed += instance.OnUp_Inv;
+            @Up_Inv.canceled += instance.OnUp_Inv;
+            @Down_Inv.started += instance.OnDown_Inv;
+            @Down_Inv.performed += instance.OnDown_Inv;
+            @Down_Inv.canceled += instance.OnDown_Inv;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1032,6 +1154,15 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @Fire.started -= instance.OnFire;
             @Fire.performed -= instance.OnFire;
             @Fire.canceled -= instance.OnFire;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
+            @Up_Inv.started -= instance.OnUp_Inv;
+            @Up_Inv.performed -= instance.OnUp_Inv;
+            @Up_Inv.canceled -= instance.OnUp_Inv;
+            @Down_Inv.started -= instance.OnDown_Inv;
+            @Down_Inv.performed -= instance.OnDown_Inv;
+            @Down_Inv.canceled -= instance.OnDown_Inv;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1217,6 +1348,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
+        void OnUp_Inv(InputAction.CallbackContext context);
+        void OnDown_Inv(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

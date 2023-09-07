@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     
     public static event Action _confirmed ;
     public static event Action _canceledconfirmed;
+    public static event Action _inventoryOpen;
+    public static event Action _upInv;
+    public static event Action _downInv;
     
     // Visuals
 
@@ -45,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
         _input.Enable();
         _input.Player.Fire.performed += ConfirmedFunction;
         _input.Player.Fire.canceled += CanceledConfirmedFunction;
+        _input.Player.Inventory.performed += InventoryFunction;
+        
+        // Inventory
+        
+        _input.Player.Up_Inv.performed += Up_i;
+        _input.Player.Down_Inv.performed += Down_i;
     }
 
     private void OnDisable()
@@ -52,11 +61,23 @@ public class PlayerMovement : MonoBehaviour
         _input.Disable();
         _input.Player.Fire.performed -= ConfirmedFunction;
         _input.Player.Fire.canceled -= CanceledConfirmedFunction;
+        _input.Player.Inventory.performed -= InventoryFunction;
+        
+        // Inventory
+
+        _input.Player.Up_Inv.performed -= Up_i;
+        _input.Player.Down_Inv.performed -= Down_i;
     }
 
     private void Update()
     {
         if (DialogueManager.GetInstance()._dialogueIsPlaying)
+        {
+            _animator.SetFloat("Speed", 0.00f);
+            return;
+        }
+        
+        if (InventoryManagement_GUI.DisplayingGUI)
         {
             _animator.SetFloat("Speed", 0.00f);
             return;
@@ -70,6 +91,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (DialogueManager.GetInstance()._dialogueIsPlaying)
+        {
+            return;
+        }
+        
+        if (InventoryManagement_GUI.DisplayingGUI)
         {
             return;
         }
@@ -90,5 +116,20 @@ public class PlayerMovement : MonoBehaviour
     private void CanceledConfirmedFunction(InputAction.CallbackContext value)
     {
         _canceledconfirmed?.Invoke();
+    }
+    
+    private void InventoryFunction(InputAction.CallbackContext value)
+    {
+        _inventoryOpen?.Invoke();
+    }
+    
+    private void Up_i(InputAction.CallbackContext value)
+    {
+        _upInv?.Invoke();
+    }
+    
+    private void Down_i(InputAction.CallbackContext value)
+    {
+        _downInv?.Invoke();
     }
 }
